@@ -1,18 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { ShieldCheck, CheckCircle2, MessageCircle } from "lucide-react";
 import { Logo } from "@/components/common/Logo";
 
 export function Footer() {
-  const pathname = usePathname();
-
-  // Hide public footer on admin routes so admin panel is completely separate
-  if (pathname.startsWith("/admin")) {
-    return null;
-  }
-
   return (
     <footer className="bg-slate-900 text-slate-300 pt-12 pb-24 md:pb-12 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

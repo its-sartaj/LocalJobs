@@ -45,18 +45,6 @@ export const GUEST_WORKER_USER: User = {
   createdAt: new Date().toISOString(),
 };
 
-export const DEFAULT_ADMIN_USER: User = {
-  id: "usr-admin-1",
-  name: "Admin Control",
-  phone: "9999900000",
-  role: "admin",
-  skills: [],
-  operatingPincodes: [],
-  isVerified: true,
-  city: "HQ",
-  credits: 9999,
-  createdAt: new Date().toISOString(),
-};
 
 // Helpers for localStorage
 function getFromStorage<T>(key: string, fallback: T): T {
@@ -205,8 +193,6 @@ export function switchRole(role: UserRole, specificWorkerId?: string): User {
   let userToSet: User;
   if (role === "customer") {
     userToSet = DEFAULT_CUSTOMER_USER;
-  } else if (role === "admin") {
-    userToSet = DEFAULT_ADMIN_USER;
   } else {
     const workers = getWorkers();
     userToSet =

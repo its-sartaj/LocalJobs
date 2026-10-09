@@ -1,4 +1,4 @@
-export type UserRole = 'customer' | 'worker' | 'admin';
+export type UserRole = 'customer' | 'worker';
 
 export type JobUrgency = 'urgent' | 'today' | 'flexible';
 

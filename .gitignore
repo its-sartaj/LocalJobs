@@ -37,9 +37,9 @@ yarn-error.log*
 *.key
 *.cert
 service-account*.json
-firebase-admin*.json
+firebase-*.json
 
-# Admin Panel (User instruction: ONLY public website deployed, Admin Panel excluded from public repo)
+# Private internal modules
 src/app/admin/
 src/components/admin/
 

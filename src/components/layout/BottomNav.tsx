@@ -7,11 +7,6 @@ import { Home, PlusCircle, Wrench } from "lucide-react";
 export function BottomNav() {
   const pathname = usePathname();
 
-  // Completely separate admin panel from public navigation
-  if (pathname.startsWith("/admin")) {
-    return null;
-  }
-
   const navItems = [
     {
       label: "Home",

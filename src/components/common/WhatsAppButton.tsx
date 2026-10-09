@@ -1,16 +1,8 @@
 "use client";
 
-import { usePathname } from "next/navigation";
 import { MessageCircle } from "lucide-react";
 
 export function WhatsAppButton() {
-  const pathname = usePathname();
-
-  // Hide support button on admin pages
-  if (pathname.startsWith("/admin")) {
-    return null;
-  }
-
   const helplineNumber = "917979968347";
   const message = encodeURIComponent(
     "Namaste Local Jobs! Mujhe mechanic chahiye / Mera kaam post karna hai. Kripya help karein."

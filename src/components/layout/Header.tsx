@@ -13,32 +13,6 @@ export function Header() {
   const [showLocationModal, setShowLocationModal] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Dedicated Standalone Admin Topbar (Separated completely from public website)
-  if (pathname.startsWith("/admin")) {
-    return (
-      <header className="sticky top-0 z-40 bg-slate-900 border-b border-slate-800 shadow-md">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center gap-3">
-              <Link href="/admin">
-                <Logo variant="dark" size="sm" />
-              </Link>
-              <span className="bg-purple-900/60 text-purple-300 border border-purple-700/50 text-[11px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full">
-                Admin Dashboard
-              </span>
-            </div>
-            <Link
-              href="/"
-              className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-300 hover:text-white bg-slate-800 hover:bg-slate-700 px-3.5 py-1.5 rounded-xl border border-slate-700 transition"
-            >
-              <span>← Website Par Wapas Jayein</span>
-            </Link>
-          </div>
-        </div>
-      </header>
-    );
-  }
-
   return (
     <>
       <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-[0_2px_10px_-4px_rgba(15,23,42,0.06)] transition-all">
