@@ -1,0 +1,320 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 15, 23, 42;
+  --background-rgb: 248, 250, 252;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background-color: #f8fafc;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Outdoor daylight readability: high contrast text */
+.high-contrast-text {
+  color: #0f172a !important;
+}
+
+/* Touch targets for budget smartphones */
+button, a, input, select {
+  touch-action: manipulation;
+}
+
+/* Custom scrollbar for horizontal category pills */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Pulse animation for urgent badges */
+@keyframes urgent-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.04);
+  }
+}
+
+.animate-urgent {
+  animation: urgent-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Smooth Infinite Auto Slider / Marquee */
+@keyframes auto-slider-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-auto-slider {
+  display: flex;
+  width: max-content;
+  animation: auto-slider-scroll 25s linear infinite;
+  will-change: transform;
+}
+
+.animate-auto-slider:hover,
+.animate-auto-slider:focus-within {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-auto-slider {
+    animation: none;
+  }
+  .animate-eagle-soar,
+  .animate-eagle-wing-left,
+  .animate-eagle-wing-right,
+  .animate-eagle-traverse,
+  .animate-distant-bird-1,
+  .animate-distant-bird-2,
+  .animate-mist-slow {
+    animation: none !important;
+  }
+}
+
+/* Real-time Eagle Soaring & Flapping Animations */
+@keyframes eagle-soar {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(1deg) scale(1);
+  }
+  20% {
+    transform: translate3d(-18px, -14px, 0) rotate(-3deg) scale(1.03);
+  }
+  40% {
+    transform: translate3d(-32px, 8px, 0) rotate(2deg) scale(0.98);
+  }
+  65% {
+    transform: translate3d(-12px, 18px, 0) rotate(4deg) scale(0.96);
+  }
+  85% {
+    transform: translate3d(8px, -6px, 0) rotate(-1deg) scale(1.02);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(1deg) scale(1);
+  }
+}
+
+.animate-eagle-soar {
+  animation: eagle-soar 16s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Wing Flapping: Powerful strokes followed by long graceful soaring glides */
+@keyframes eagle-wing-left-stroke {
+  0%, 100% {
+    transform: rotate(0deg) scaleY(1);
+  }
+  12% {
+    transform: rotate(-18deg) scaleY(0.9);
+  }
+  24% {
+    transform: rotate(20deg) scaleY(1.08);
+  }
+  36% {
+    transform: rotate(-14deg) scaleY(0.92);
+  }
+  48% {
+    transform: rotate(18deg) scaleY(1.05);
+  }
+  60%, 92% {
+    transform: rotate(2deg) scaleY(0.98);
+  }
+}
+
+.animate-eagle-wing-left {
+  animation: eagle-wing-left-stroke 6.5s ease-in-out infinite;
+  transform-origin: 100px 65px;
+  will-change: transform;
+}
+
+@keyframes eagle-wing-right-stroke {
+  0%, 100% {
+    transform: rotate(0deg) scaleY(1);
+  }
+  12% {
+    transform: rotate(18deg) scaleY(0.9);
+  }
+  24% {
+    transform: rotate(-20deg) scaleY(1.08);
+  }
+  36% {
+    transform: rotate(14deg) scaleY(0.92);
+  }
+  48% {
+    transform: rotate(-18deg) scaleY(1.05);
+  }
+  60%, 92% {
+    transform: rotate(-2deg) scaleY(0.98);
+  }
+}
+
+.animate-eagle-wing-right {
+  animation: eagle-wing-right-stroke 6.5s ease-in-out infinite;
+  transform-origin: 120px 65px;
+  will-change: transform;
+}
+
+/* Secondary Eagle Traversing across horizon */
+@keyframes eagle-traverse-path {
+  0% {
+    transform: translate3d(115vw, 10px, 0) scale(0.7) rotate(-3deg);
+  }
+  25% {
+    transform: translate3d(80vw, -12px, 0) scale(0.85) rotate(2deg);
+  }
+  50% {
+    transform: translate3d(45vw, 15px, 0) scale(0.95) rotate(-1deg);
+  }
+  75% {
+    transform: translate3d(15vw, -6px, 0) scale(0.8) rotate(3deg);
+  }
+  100% {
+    transform: translate3d(-20vw, 14px, 0) scale(0.65) rotate(-3deg);
+  }
+}
+
+.animate-eagle-traverse {
+  animation: eagle-traverse-path 28s linear infinite;
+  will-change: transform;
+}
+
+/* Distant Circling Birds */
+@keyframes distant-bird-float-1 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-60px, -18px) scale(0.9);
+  }
+}
+
+.animate-distant-bird-1 {
+  animation: distant-bird-float-1 14s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes distant-bird-float-2 {
+  0%, 100% {
+    transform: translate(0, 0) scale(0.9);
+  }
+  50% {
+    transform: translate(50px, 14px) scale(1.05);
+  }
+}
+
+.animate-distant-bird-2 {
+  animation: distant-bird-float-2 18s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Drifting Mist between mountain layers */
+@keyframes mist-drift {
+  0%, 100% {
+    transform: translateX(0);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateX(-35px);
+    opacity: 0.6;
+  }
+}
+
+.animate-mist-slow {
+  animation: mist-drift 20s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+/* Real Photographic Eagle Soaring & 3D Flight Dynamics */
+@keyframes real-eagle-soar-flight {
+  0% {
+    transform: translate3d(0, 0, 0) rotateZ(2deg) rotateY(0deg) scale(1);
+  }
+  20% {
+    transform: translate3d(-30px, -18px, 0) rotateZ(-5deg) rotateY(-8deg) scale(1.05);
+  }
+  40% {
+    transform: translate3d(-50px, 14px, 0) rotateZ(3deg) rotateY(6deg) scale(0.98);
+  }
+  65% {
+    transform: translate3d(-20px, 28px, 0) rotateZ(6deg) rotateY(10deg) scale(0.95);
+  }
+  85% {
+    transform: translate3d(16px, -10px, 0) rotateZ(-2deg) rotateY(-4deg) scale(1.02);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotateZ(2deg) rotateY(0deg) scale(1);
+  }
+}
+
+.animate-real-eagle-soar {
+  animation: real-eagle-soar-flight 18s ease-in-out infinite;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+@keyframes real-eagle-wing-beat {
+  0%, 100% {
+    transform: scaleY(1) rotateX(0deg);
+  }
+  10% {
+    transform: scaleY(0.9) rotateX(-12deg);
+  }
+  22% {
+    transform: scaleY(1.08) rotateX(14deg);
+  }
+  34% {
+    transform: scaleY(0.92) rotateX(-10deg);
+  }
+  46% {
+    transform: scaleY(1.06) rotateX(12deg);
+  }
+  58%, 92% {
+    transform: scaleY(1) rotateX(0deg);
+  }
+}
+
+.animate-real-eagle-flap {
+  animation: real-eagle-wing-beat 7s ease-in-out infinite;
+  transform-origin: center 60%;
+  will-change: transform;
+}
+
+@keyframes horizon-eagle-traverse-path {
+  0% {
+    transform: translate3d(105vw, 15px, 0) scale(0.65) rotate(-3deg);
+  }
+  25% {
+    transform: translate3d(75vw, -15px, 0) scale(0.78) rotate(2deg);
+  }
+  50% {
+    transform: translate3d(45vw, 18px, 0) scale(0.88) rotate(-2deg);
+  }
+  75% {
+    transform: translate3d(15vw, -8px, 0) scale(0.74) rotate(3deg);
+  }
+  100% {
+    transform: translate3d(-20vw, 16px, 0) scale(0.6) rotate(-3deg);
+  }
+}
+
+.animate-horizon-eagle-traverse {
+  animation: horizon-eagle-traverse-path 32s linear infinite;
+  will-change: transform;
+}
+
+

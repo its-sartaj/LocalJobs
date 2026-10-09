@@ -1,0 +1,18 @@
+{
+  "name": "Local Jobs - अपने एरिया का काम",
+  "short_name": "Local Jobs",
+  "description": "Apne area ke verified mechanic aur technician se direct call pe connect karein.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#f97316",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
