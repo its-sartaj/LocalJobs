@@ -157,7 +157,7 @@ export function Hero() {
               </div>
               <div>
                 <p className="text-xs sm:text-sm font-bold text-slate-900">Direct Phone Call</p>
-                <p className="text-[11px] text-slate-500">Seedha mechanic se baat karein</p>
+                <p className="text-[11px] text-slate-600">Seedha mechanic se baat karein</p>
               </div>
             </div>
 
@@ -167,7 +167,7 @@ export function Hero() {
               </div>
               <div>
                 <p className="text-xs sm:text-sm font-bold text-slate-900">15–30 Min Arrival</p>
-                <p className="text-[11px] text-slate-500">Aapke apne area ke mechanic</p>
+                <p className="text-[11px] text-slate-600">Aapke apne area ke mechanic</p>
               </div>
             </div>
 
@@ -177,7 +177,7 @@ export function Hero() {
               </div>
               <div>
                 <p className="text-xs sm:text-sm font-bold text-slate-900">₹0 Booking Charges</p>
-                <p className="text-[11px] text-slate-500">Zero commission, fair pricing</p>
+                <p className="text-[11px] text-slate-600">Zero commission, fair pricing</p>
               </div>
             </div>
           </div>

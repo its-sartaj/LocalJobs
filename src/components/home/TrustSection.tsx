@@ -43,7 +43,7 @@ export function TrustSection() {
           <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
             Log Local Jobs Par Kyun Bharosa Karte Hain?
           </h2>
-          <p className="text-sm text-slate-500 mt-1">
+          <p className="text-sm text-slate-600 mt-1">
             Delhi NCR ke aam logon ke real anubhav aur direct phone connection ki suvidha.
           </p>
         </div>
@@ -63,7 +63,7 @@ export function TrustSection() {
                       <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
                     ))}
                   </div>
-                  <span className="text-[10px] text-slate-400 font-medium">{t.time}</span>
+                  <span className="text-[10px] text-slate-600 font-medium">{t.time}</span>
                 </div>
 
                 <p className="text-xs sm:text-sm text-slate-700 leading-relaxed mb-4">
@@ -73,8 +73,8 @@ export function TrustSection() {
 
               <div className="pt-3 border-t border-slate-200/60 flex items-center justify-between">
                 <div>
-                  <h4 className="font-bold text-xs sm:text-sm text-slate-900">{t.name}</h4>
-                  <p className="text-[11px] text-slate-500">{t.area}</p>
+                  <h3 className="font-bold text-xs sm:text-sm text-slate-900">{t.name}</h3>
+                  <p className="text-[11px] text-slate-600">{t.area}</p>
                 </div>
                 <span className="text-[10px] font-semibold bg-white text-slate-700 px-2.5 py-1 rounded-full border border-slate-200">
                   {t.service}
@@ -90,7 +90,7 @@ export function TrustSection() {
             <h3 className="text-lg font-bold text-white mb-1">
               Suraksha & Vishwas Ki Guarantee
             </h3>
-            <p className="text-xs text-slate-400 max-w-xl">
+            <p className="text-xs text-slate-300 max-w-xl">
               Har registered mechanic ka phone number aur area verify hota hai. Customer ke liye yeh service hamesha 100% free rahegi.
             </p>
           </div>

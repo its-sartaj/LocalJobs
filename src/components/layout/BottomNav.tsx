@@ -38,7 +38,7 @@ export function BottomNav() {
               key={item.href}
               href={item.href}
               className={`flex flex-col items-center justify-center py-1 px-4 rounded-xl transition active:scale-95 ${
-                item.isActive ? "text-brand-600 font-bold" : "text-slate-500 hover:text-slate-900"
+                item.isActive ? "text-brand-600 font-bold" : "text-slate-600 hover:text-slate-900"
               }`}
             >
               <Icon className={`w-5 h-5 ${item.isActive ? "stroke-[2.5]" : "stroke-[1.8]"}`} />

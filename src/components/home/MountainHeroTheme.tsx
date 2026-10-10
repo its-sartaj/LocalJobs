@@ -24,6 +24,8 @@ export function MountainHeroTheme() {
           <img
             src="/images/mountain_bg_mobile.webp"
             alt="Cinematic Mountain peaks"
+            width={480}
+            height={267}
             fetchPriority="high"
             loading="eager"
             decoding="async"

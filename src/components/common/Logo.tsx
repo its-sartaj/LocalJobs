@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 interface LogoProps {
   variant?: "light" | "dark";
   size?: "sm" | "md" | "lg";
@@ -19,7 +17,7 @@ export function Logo({
         className="relative shrink-0 transition-all duration-300 group-hover:scale-105 group-hover:rotate-1"
         style={{ width: iconSize, height: iconSize }}
       >
-        <Image
+        <img
           src="/logo.svg"
           alt="Local Jobs Logo"
           width={iconSize}

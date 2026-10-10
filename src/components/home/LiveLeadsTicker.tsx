@@ -25,9 +25,9 @@ export function LiveLeadsTicker() {
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-5 gap-2">
           <div className="flex items-center gap-2.5">
             <span className="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
-            <h3 className="font-bold text-sm sm:text-base text-white">
+            <h2 className="font-bold text-sm sm:text-base text-white">
               Live Activity • Real-Time Customer Requests
-            </h3>
+            </h2>
           </div>
           <Link
             href="/worker/feed"
@@ -47,8 +47,8 @@ export function LiveLeadsTicker() {
             >
               <div>
                 <div className="flex items-center justify-between text-[11px] mb-2">
-                  <span className="flex items-center gap-1 text-slate-400">
-                    <Clock className="w-3 h-3 text-slate-500" />
+                  <span className="flex items-center gap-1 text-slate-300">
+                    <Clock className="w-3 h-3 text-slate-400" />
                     <span>{formatTimeAgo(lead.createdAt)}</span>
                   </span>
                   <span
@@ -62,18 +62,18 @@ export function LiveLeadsTicker() {
                   </span>
                 </div>
 
-                <h4 className="text-xs font-bold text-slate-200 line-clamp-1 group-hover:text-brand-400 transition">
+                <h3 className="text-xs font-bold text-slate-200 line-clamp-1 group-hover:text-brand-400 transition">
                   {lead.title}
-                </h4>
+                </h3>
 
-                <div className="flex items-center gap-1.5 text-[11px] text-slate-400 mt-2">
-                  <MapPin className="w-3 h-3 text-slate-400 shrink-0" />
+                <div className="flex items-center gap-1.5 text-[11px] text-slate-300 mt-2">
+                  <MapPin className="w-3 h-3 text-slate-300 shrink-0" />
                   <span className="truncate">{lead.location.area}</span>
                 </div>
               </div>
 
               <div className="mt-3 pt-2.5 border-t border-slate-700/60 flex items-center justify-between text-[11px]">
-                <span className="text-slate-500 font-mono">#{lead.id}</span>
+                <span className="text-slate-400 font-mono">#{lead.id}</span>
                 <span className="text-emerald-400 font-medium flex items-center gap-1">
                   <CheckCircle2 className="w-3 h-3" />
                   <span>Verified</span>

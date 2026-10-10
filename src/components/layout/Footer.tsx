@@ -21,7 +21,7 @@ export function Footer() {
 
           {/* Quick Categories */}
           <div>
-            <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-3">Popular Services</h4>
+            <h3 className="text-xs font-bold text-white uppercase tracking-wider mb-3">Popular Services</h3>
             <ul className="space-y-2 text-xs text-slate-400">
               <li><Link href="/post-task?category=ac_repair" className="hover:text-brand-400 transition">AC Repair & Gas Refill</Link></li>
               <li><Link href="/post-task?category=electrician" className="hover:text-brand-400 transition">Electrician & Wiring</Link></li>
@@ -34,7 +34,7 @@ export function Footer() {
 
           {/* For Workers & Technicians */}
           <div>
-            <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-3">Mechanic & Technicians</h4>
+            <h3 className="text-xs font-bold text-white uppercase tracking-wider mb-3">Mechanic & Technicians</h3>
             <ul className="space-y-2 text-xs text-slate-400">
               <li>
                 <Link href="/worker/feed" className="hover:text-brand-400 font-semibold text-slate-200 transition">
@@ -56,7 +56,7 @@ export function Footer() {
 
           {/* Trust & Support */}
           <div>
-            <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-3">Suraksha & Support</h4>
+            <h3 className="text-xs font-bold text-white uppercase tracking-wider mb-3">Suraksha & Support</h3>
             <div className="space-y-3 text-xs">
               <div className="flex items-start gap-2 text-slate-300">
                 <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
@@ -71,7 +71,7 @@ export function Footer() {
                 <MessageCircle className="w-4 h-4 shrink-0" />
                 <span>WhatsApp: +91 79799 68347</span>
               </a>
-              <p className="text-[11px] text-slate-500 leading-relaxed pt-1">
+              <p className="text-[11px] text-slate-400 leading-relaxed pt-1">
                 Local Jobs connects customers directly with independent service providers in Delhi NCR.
               </p>
             </div>
@@ -79,7 +79,7 @@ export function Footer() {
         </div>
 
         {/* Bottom copyright */}
-        <div className="border-t border-slate-800 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-3">
+        <div className="border-t border-slate-800 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-3">
           <p>© {new Date().getFullYear()} Local Jobs - Apne Area Ka Kaam. All rights reserved.</p>
           <p className="flex items-center gap-1">
             Designed for Bharat&apos;s local technicians &amp; homeowners

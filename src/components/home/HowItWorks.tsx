@@ -44,7 +44,7 @@ export function HowItWorks() {
           <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
             Local Jobs Kaise Kaam Karta Hai?
           </h2>
-          <p className="text-sm text-slate-500 mt-1">
+          <p className="text-sm text-slate-600 mt-1">
             Bina kisi app download ya lambe form ke — seedha aur transparent tarika.
           </p>
         </div>
@@ -63,7 +63,7 @@ export function HowItWorks() {
                     <span className="text-xs font-black text-brand-600 bg-brand-50 px-2.5 py-1 rounded-full">
                       STEP {st.step}
                     </span>
-                    <span className="text-[10px] text-slate-400 font-semibold">{st.badge}</span>
+                    <span className="text-[10px] text-slate-700 font-semibold">{st.badge}</span>
                   </div>
 
                   <div className="w-12 h-12 rounded-xl bg-slate-50 text-slate-700 flex items-center justify-center mb-4">
@@ -89,16 +89,16 @@ export function HowItWorks() {
             <h3 className="font-extrabold text-lg text-slate-900">
               Local Jobs vs Badi Service Apps
             </h3>
-            <p className="text-xs text-slate-500">Kyun lakho log pados ke local mechanic ko prefer karte hain:</p>
+            <p className="text-xs text-slate-600">Kyun lakho log pados ke local mechanic ko prefer karte hain:</p>
           </div>
 
           <div className="overflow-x-auto">
             <table className="w-full text-xs text-left">
               <thead>
-                <tr className="border-b border-slate-100 text-slate-400 font-semibold">
+                <tr className="border-b border-slate-100 text-slate-700 font-semibold">
                   <th className="py-2.5 px-3">Suvidha</th>
                   <th className="py-2.5 px-3 text-brand-600 font-extrabold bg-brand-50/50 rounded-t-lg">Local Jobs</th>
-                  <th className="py-2.5 px-3 text-slate-500">Heavy Service Apps</th>
+                  <th className="py-2.5 px-3 text-slate-600">Heavy Service Apps</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100">
@@ -108,7 +108,7 @@ export function HowItWorks() {
                     <td className="py-3 px-3 font-bold text-slate-900 bg-brand-50/30">
                       ✓ {item.localJobs}
                     </td>
-                    <td className="py-3 px-3 text-slate-400">✗ {item.others}</td>
+                    <td className="py-3 px-3 text-slate-600">✗ {item.others}</td>
                   </tr>
                 ))}
               </tbody>

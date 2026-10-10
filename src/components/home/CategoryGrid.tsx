@@ -90,7 +90,7 @@ export function CategoryGrid() {
                   <h3 className="font-bold text-sm sm:text-base text-slate-900 group-hover:text-brand-600 transition-colors leading-snug">
                     {category.title}
                   </h3>
-                  <p className="text-[11px] text-slate-400 font-medium mb-2.5">
+                  <p className="text-[11px] text-slate-600 font-medium mb-2.5">
                     {category.hindiTitle}
                   </p>
 
@@ -110,8 +110,8 @@ export function CategoryGrid() {
                 {/* Footer strip: Rate & Arrival */}
                 <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
                   <span className="font-semibold text-slate-700">{category.avgRate}</span>
-                  <div className="flex items-center gap-1 text-[10px] text-slate-400">
-                    <Clock className="w-3 h-3 text-slate-400" />
+                  <div className="flex items-center gap-1 text-[10px] text-slate-600">
+                    <Clock className="w-3 h-3 text-slate-600" />
                     <span>{category.estimatedArrival}</span>
                   </div>
                 </div>

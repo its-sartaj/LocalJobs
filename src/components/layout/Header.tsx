@@ -29,6 +29,7 @@ export function Header() {
                 onClick={() => setShowLocationModal(true)}
                 className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-50 hover:bg-slate-100/80 text-slate-700 text-xs font-semibold border border-slate-200/80 transition active:scale-95 group"
                 title="Change Operating Area"
+                aria-label="Change operating area"
               >
                 <MapPin className="w-3.5 h-3.5 text-brand-500 group-hover:scale-110 transition-transform shrink-0" />
                 <span className="truncate max-w-[130px] font-medium text-slate-800">{selectedPincode.area}</span>
@@ -125,7 +126,7 @@ export function Header() {
                 </div>
                 <div>
                   <p className="font-extrabold text-slate-900">Kaam Karwana Hai</p>
-                  <p className="text-[11px] text-slate-500 font-normal">AC, Electrician, Plumber post karein</p>
+                  <p className="text-[11px] text-slate-600 font-normal">AC, Electrician, Plumber post karein</p>
                 </div>
               </div>
               <span className="text-[10px] bg-brand-200 text-brand-900 font-black px-2 py-0.5 rounded-full">Free</span>
@@ -142,7 +143,7 @@ export function Header() {
                 </div>
                 <div>
                   <p className="font-extrabold text-slate-900">Leads Feed (Kaam Chahiye)</p>
-                  <p className="text-[11px] text-slate-500 font-normal">Area ke live customer jobs dekhein</p>
+                  <p className="text-[11px] text-slate-600 font-normal">Area ke live customer jobs dekhein</p>
                 </div>
               </div>
               <span className="text-[10px] bg-blue-200 text-blue-900 font-black px-2 py-0.5 rounded-full">Mechanic</span>
@@ -159,7 +160,7 @@ export function Header() {
                 </div>
                 <div>
                   <p className="font-extrabold text-slate-900">Mechanic Profile Banayein</p>
-                  <p className="text-[11px] text-slate-500 font-normal">Free registration & naye customers paayein</p>
+                  <p className="text-[11px] text-slate-600 font-normal">Free registration & naye customers paayein</p>
                 </div>
               </div>
               <span className="text-[10px] bg-amber-200 text-amber-900 font-black px-2 py-0.5 rounded-full">Partner</span>
@@ -189,7 +190,12 @@ export function Header() {
 
       {/* Location Picker Modal */}
       {showLocationModal && (
-        <div className="fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-sm flex items-center justify-center p-4">
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="location-modal-title"
+          className="fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-sm flex items-center justify-center p-4"
+        >
           <div className="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl border border-slate-100 animate-in zoom-in-95">
             <div className="flex items-center justify-between pb-3 border-b border-slate-100">
               <div className="flex items-center gap-2">
@@ -197,8 +203,8 @@ export function Header() {
                   <MapPin className="w-4 h-4" />
                 </div>
                 <div>
-                  <h3 className="text-base font-extrabold text-slate-900">Apna Area Chunein</h3>
-                  <p className="text-[11px] text-slate-500">Hyperlocal: Sirf aapke pados ke mechanic connect honge</p>
+                  <h3 id="location-modal-title" className="text-base font-extrabold text-slate-900">Apna Area Chunein</h3>
+                  <p className="text-[11px] text-slate-600">Hyperlocal: Sirf aapke pados ke mechanic connect honge</p>
                 </div>
               </div>
               <button
@@ -228,7 +234,7 @@ export function Header() {
                   >
                     <div>
                       <p className="text-sm font-bold text-slate-900">{item.area}</p>
-                      <p className="text-xs text-slate-500">{item.city} • Pincode: {item.pincode}</p>
+                      <p className="text-xs text-slate-600">{item.city} • Pincode: {item.pincode}</p>
                     </div>
                     {isSelected && (
                       <div className="w-6 h-6 rounded-full bg-brand-500 text-white flex items-center justify-center">
