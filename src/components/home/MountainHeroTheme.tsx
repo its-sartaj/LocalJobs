@@ -1,6 +1,4 @@
-"use client";
-
-import React, { memo } from "react";
+import React from "react";
 
 /**
  * MountainHeroTheme
@@ -8,7 +6,7 @@ import React, { memo } from "react";
  * real-time soaring photographic Bald Eagle with natural 3D flight physics and wing flexing,
  * distant gliding eagles, and natural valley clouds/mist seamlessly blending into the page.
  */
-export const MountainHeroTheme = memo(function MountainHeroTheme() {
+export function MountainHeroTheme() {
   return (
     <div
       aria-hidden="true"
@@ -103,4 +101,4 @@ export const MountainHeroTheme = memo(function MountainHeroTheme() {
       />
     </div>
   );
-});
+}

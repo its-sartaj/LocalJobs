@@ -1,5 +1,3 @@
-"use client";
-
 import { FileText, PhoneCall, CheckCircle2, ShieldAlert, Zap, ArrowRight } from "lucide-react";
 import Link from "next/link";
 

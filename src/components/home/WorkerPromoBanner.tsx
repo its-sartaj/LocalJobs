@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import { Wrench, PhoneCall, ArrowRight, ShieldCheck, Coins } from "lucide-react";
 

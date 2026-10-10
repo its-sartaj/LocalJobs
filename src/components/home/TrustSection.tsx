@@ -1,5 +1,3 @@
-"use client";
-
 import { ShieldCheck, PhoneCall, Zap, Star, CheckCircle2, UserCheck } from "lucide-react";
 
 export function TrustSection() {
