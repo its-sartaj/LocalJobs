@@ -82,6 +82,7 @@ export function Header() {
               {/* Mobile Location Quick Button */}
               <button
                 onClick={() => setShowLocationModal(true)}
+                aria-label="Change location area"
                 className="sm:hidden flex items-center gap-1 px-2.5 py-1.5 rounded-full bg-slate-50 text-slate-700 text-[11px] font-semibold border border-slate-200"
               >
                 <MapPin className="w-3 h-3 text-brand-500" />
@@ -202,6 +203,7 @@ export function Header() {
               </div>
               <button
                 onClick={() => setShowLocationModal(false)}
+                aria-label="Close location modal"
                 className="p-1.5 rounded-full text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition"
               >
                 <X className="w-5 h-5" />

@@ -16,13 +16,26 @@ export const MountainHeroTheme = memo(function MountainHeroTheme() {
     >
       {/* 1. REAL CINEMATIC PHOTOGRAPHIC MOUNTAIN LANDSCAPE */}
       <div className="absolute inset-0 w-full h-full">
-        {/* Real Mountain Photography (National Geographic 8K Quality) */}
-        <div
-          className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat scale-[1.02] transform-gpu"
-          style={{
-            backgroundImage: "url('/images/mountain_bg.jpg')",
-          }}
-        />
+        {/* Real Mountain Photography (Optimized WebP, 96% lighter on mobile) */}
+        <picture className="absolute inset-0 w-full h-full block">
+          <source
+            media="(max-width: 768px)"
+            srcSet="/images/mountain_bg_mobile.webp"
+            type="image/webp"
+          />
+          <source
+            srcSet="/images/mountain_bg.webp"
+            type="image/webp"
+          />
+          <img
+            src="/images/mountain_bg.jpg"
+            alt="Cinematic Mountain peaks"
+            fetchPriority="high"
+            loading="eager"
+            decoding="async"
+            className="w-full h-full object-cover object-center scale-[1.02] transform-gpu"
+          />
+        </picture>
 
         {/* Cinematic Atmospheric Color Grade Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#162231]/55 via-[#233549]/35 to-[#121c27]/75 mix-blend-multiply" />
@@ -34,24 +47,39 @@ export const MountainHeroTheme = memo(function MountainHeroTheme() {
       {/* 2. REAL-TIME REAL PHOTOGRAPHIC EAGLE (Primary majestic soaring eagle in the sky) */}
       <div className="absolute top-2 sm:top-5 right-2 sm:right-12 md:right-20 z-20 pointer-events-none">
         <div className="animate-real-eagle-soar w-32 sm:w-44 md:w-56 h-auto filter drop-shadow-[0_12px_24px_rgba(0,0,0,0.6)]">
-          <img
-            src="/images/eagle.png"
-            alt="Real soaring eagle"
-            className="w-full h-auto object-contain select-none pointer-events-none animate-real-eagle-flap"
-            draggable={false}
-          />
+          <picture>
+            <source srcSet="/images/eagle.webp" type="image/webp" />
+            <img
+              src="/images/eagle.png"
+              alt="Real soaring eagle"
+              width={224}
+              height={154}
+              fetchPriority="high"
+              loading="eager"
+              decoding="async"
+              className="w-full h-auto object-contain select-none pointer-events-none animate-real-eagle-flap"
+              draggable={false}
+            />
+          </picture>
         </div>
       </div>
 
       {/* 3. SECONDARY HORIZON GLIDER (Gliding slowly across distant mountain peaks) */}
       <div className="absolute top-10 left-0 w-full z-15 pointer-events-none opacity-80">
         <div className="animate-horizon-eagle-traverse w-16 sm:w-24 h-auto filter drop-shadow-[0_6px_12px_rgba(0,0,0,0.5)]">
-          <img
-            src="/images/eagle.png"
-            alt="Distant eagle"
-            className="w-full h-auto object-contain select-none pointer-events-none opacity-85"
-            draggable={false}
-          />
+          <picture>
+            <source srcSet="/images/eagle.webp" type="image/webp" />
+            <img
+              src="/images/eagle.png"
+              alt="Distant eagle"
+              width={96}
+              height={66}
+              loading="lazy"
+              decoding="async"
+              className="w-full h-auto object-contain select-none pointer-events-none opacity-85"
+              draggable={false}
+            />
+          </picture>
         </div>
       </div>
 

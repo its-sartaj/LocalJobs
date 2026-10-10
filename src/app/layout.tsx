@@ -47,6 +47,31 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="hi-IN" className="scroll-smooth">
+      <head>
+        <link
+          rel="preload"
+          as="image"
+          href="/images/mountain_bg_mobile.webp"
+          media="(max-width: 768px)"
+          fetchPriority="high"
+          type="image/webp"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="/images/mountain_bg.webp"
+          media="(min-width: 769px)"
+          fetchPriority="high"
+          type="image/webp"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="/images/eagle.webp"
+          fetchPriority="high"
+          type="image/webp"
+        />
+      </head>
       <body className="min-h-screen flex flex-col bg-slate-50 text-slate-900 font-sans antialiased selection:bg-brand-500 selection:text-white pb-28 md:pb-0">
         <Header />
         <main className="flex-1">{children}</main>
