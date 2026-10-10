@@ -35,7 +35,8 @@ export function WorkerPromoBanner() {
           <div className="flex flex-col sm:flex-row lg:flex-col gap-3 shrink-0 w-full sm:w-auto">
             <Link
               href="/worker/register"
-              className="bg-brand-500 hover:bg-brand-600 active:bg-brand-700 text-white font-bold text-xs sm:text-sm px-6 py-3.5 rounded-2xl shadow-sm transition text-center flex items-center justify-center gap-2 group active:scale-95"
+              data-agent="worker-register-button"
+              className="bg-brand-700 hover:bg-brand-800 active:bg-brand-900 text-white font-bold text-xs sm:text-sm px-6 py-3.5 rounded-2xl shadow-sm transition text-center flex items-center justify-center gap-2 group active:scale-95"
             >
               <Wrench className="w-4 h-4" />
               <span>Mechanic Profile Banayein</span>
@@ -44,6 +45,7 @@ export function WorkerPromoBanner() {
 
             <Link
               href="/worker/feed"
+              data-agent="worker-feed-button"
               className="bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs px-6 py-3 rounded-2xl transition text-center border border-slate-700"
             >
               Area Ki Live Leads Dekhein

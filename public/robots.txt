@@ -1,0 +1,21 @@
+# robots.txt for https://localjobs.work.gd
+User-agent: *
+Allow: /
+
+# AI Agents & Search Engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://localjobs.work.gd/sitemap.xml

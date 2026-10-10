@@ -6,6 +6,7 @@ import { BottomNav } from "@/components/layout/BottomNav";
 import { WhatsAppButton } from "@/components/common/WhatsAppButton";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://localjobs.work.gd"),
   title: "Local Jobs | Hyperlocal Service Marketplace",
   description:
     "Ghar ka koi bhi repair ya maintenance kaam? AC Repair, Electrician, Plumber, Fridge, Carpenter - Apne area ke verified mechanic ko direct call karein bina kisi commission ke.",
@@ -13,6 +14,32 @@ export const metadata: Metadata = {
   icons: {
     icon: "/icon.svg",
     apple: "/icon.svg",
+  },
+  alternates: {
+    canonical: "https://localjobs.work.gd/",
+  },
+  openGraph: {
+    title: "Local Jobs | Hyperlocal Service Marketplace",
+    description:
+      "Ghar ka koi bhi repair ya maintenance kaam? AC Repair, Electrician, Plumber, Fridge, Carpenter - Apne area ke verified mechanic ko direct call karein bina kisi commission ke.",
+    url: "https://localjobs.work.gd/",
+    siteName: "Local Jobs",
+    locale: "hi_IN",
+    type: "website",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1024,
+        height: 1024,
+        alt: "Local Jobs Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "Local Jobs | Hyperlocal Service Marketplace",
+    description: "Apne area ke verified mechanic ko direct call karein bina kisi commission ke.",
+    images: ["/logo.png"],
   },
   appleWebApp: {
     capable: true,
@@ -34,7 +61,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#f97316",
+  themeColor: "#c2410c",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
@@ -63,6 +90,51 @@ export default function RootLayout({
           media="(min-width: 769px)"
           fetchPriority="high"
           type="image/webp"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "WebSite",
+                  "@id": "https://localjobs.work.gd/#website",
+                  "url": "https://localjobs.work.gd/",
+                  "name": "Local Jobs",
+                  "description": "Hyperlocal verified technician marketplace in Delhi NCR",
+                  "inLanguage": "hi-IN",
+                  "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://localjobs.work.gd/post-task?query={search_term_string}",
+                    "query-input": "required name=search_term_string",
+                  },
+                },
+                {
+                  "@type": "HomeAndConstructionBusiness",
+                  "@id": "https://localjobs.work.gd/#organization",
+                  "name": "Local Jobs",
+                  "url": "https://localjobs.work.gd/",
+                  "logo": "https://localjobs.work.gd/logo.png",
+                  "telephone": "+91-7979968347",
+                  "priceRange": "₹149 - ₹1499",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Delhi NCR",
+                    "addressCountry": "IN",
+                  },
+                  "areaServed": [
+                    "Dwarka",
+                    "Rohini",
+                    "Janakpuri",
+                    "Noida",
+                    "Gurugram",
+                    "Delhi NCR",
+                  ],
+                },
+              ],
+            }),
+          }}
         />
       </head>
       <body className="min-h-screen flex flex-col bg-slate-50 text-slate-900 font-sans antialiased selection:bg-brand-500 selection:text-white pb-28 md:pb-0">

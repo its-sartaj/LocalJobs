@@ -34,7 +34,7 @@ export function MountainHeroTheme() {
         </picture>
 
         {/* Cinematic Atmospheric Color Grade Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#162231]/55 via-[#233549]/35 to-[#121c27]/75 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#162231]/70 via-[#1c2a3a]/45 to-[#121c27]/85" />
 
         {/* Upper soft vignette for crystal clear text readability */}
         <div className="absolute inset-x-0 top-0 h-3/4 bg-gradient-to-b from-slate-950/75 via-slate-900/40 to-transparent" />
@@ -59,8 +59,8 @@ export function MountainHeroTheme() {
         </div>
       </div>
 
-      {/* 3. SECONDARY HORIZON GLIDER (Gliding slowly across distant mountain peaks) */}
-      <div className="absolute top-10 left-0 w-full z-15 pointer-events-none opacity-80">
+      {/* 3. SECONDARY HORIZON GLIDER (Gliding on desktop only to preserve mobile CPU) */}
+      <div className="hidden sm:block absolute top-10 left-0 w-full z-15 pointer-events-none opacity-80">
         <div className="animate-horizon-eagle-traverse w-16 sm:w-24 h-auto filter drop-shadow-[0_6px_12px_rgba(0,0,0,0.5)]">
           <picture>
             <source srcSet="/images/eagle.webp" type="image/webp" />
@@ -78,13 +78,12 @@ export function MountainHeroTheme() {
         </div>
       </div>
 
-      {/* 4. REAL-TIME ROLLING VALLEY MIST / SEA OF CLOUDS (Authentic natural blend into page) */}
+      {/* 4. REAL-TIME ROLLING VALLEY MIST (Desktop only, GPU accelerated without software blur filter) */}
       <div
-        className="absolute inset-x-0 bottom-12 sm:bottom-20 h-48 sm:h-64 opacity-60 animate-mist-slow pointer-events-none"
+        className="hidden sm:block absolute inset-x-0 bottom-12 sm:bottom-20 h-48 sm:h-64 opacity-50 animate-mist-slow pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 90% 70% at 50% 80%, rgba(255, 255, 255, 0.55) 0%, rgba(240, 245, 250, 0.35) 45%, transparent 75%)",
-          filter: "blur(28px)",
+            "radial-gradient(ellipse 90% 70% at 50% 80%, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.25) 35%, rgba(240, 245, 250, 0.1) 60%, transparent 80%)",
         }}
       />
 

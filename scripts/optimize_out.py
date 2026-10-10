@@ -79,6 +79,13 @@ def optimize_html_files():
     with open(os.path.join(out_dir, ".nojekyll"), "wb") as f:
         pass
 
+    import shutil
+    for fname in ["robots.txt", "sitemap.xml", "icon-192.png", "icon-512.png", "manifest.json"]:
+        src = os.path.join("public", fname)
+        if os.path.exists(src):
+            shutil.copy2(src, os.path.join(out_dir, fname))
+            print(f"Copied {fname} to out/")
+
     print("Post-build optimization complete!")
 
 if __name__ == "__main__":

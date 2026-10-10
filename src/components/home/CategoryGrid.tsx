@@ -71,6 +71,9 @@ export function CategoryGrid() {
               <Link
                 key={category.id}
                 href={`/post-task?category=${category.id}`}
+                data-agent="category-card"
+                data-category-id={category.id}
+                aria-label={`${category.title} (${category.hindiTitle}) - ${category.avgRate}`}
                 className="group relative bg-white border border-slate-200/90 hover:border-slate-300 rounded-2xl p-4 sm:p-5 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5 active:scale-[0.98] flex flex-col justify-between"
               >
                 <div>
@@ -80,7 +83,7 @@ export function CategoryGrid() {
                       <IconComponent className="w-6 h-6 stroke-[2]" />
                     </div>
                     {category.badge && (
-                      <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-600">
+                      <span className="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-slate-100 text-slate-800">
                         {category.badge.replace(/[🔥⚡]/g, "").trim()}
                       </span>
                     )}
@@ -90,7 +93,7 @@ export function CategoryGrid() {
                   <h3 className="font-bold text-sm sm:text-base text-slate-900 group-hover:text-brand-600 transition-colors leading-snug">
                     {category.title}
                   </h3>
-                  <p className="text-[11px] text-slate-600 font-medium mb-2.5">
+                  <p className="text-[11px] text-slate-700 font-medium mb-2.5">
                     {category.hindiTitle}
                   </p>
 
@@ -99,7 +102,7 @@ export function CategoryGrid() {
                     {category.popularTags.slice(0, 2).map((tag, idx) => (
                       <span
                         key={idx}
-                        className="text-[10px] bg-slate-50 text-slate-600 px-2 py-0.5 rounded-md border border-slate-100 font-medium"
+                        className="text-[10px] bg-slate-50 text-slate-700 px-2 py-0.5 rounded-md border border-slate-100 font-medium"
                       >
                         {tag.split("(")[0].trim()}
                       </span>
@@ -108,10 +111,10 @@ export function CategoryGrid() {
                 </div>
 
                 {/* Footer strip: Rate & Arrival */}
-                <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
-                  <span className="font-semibold text-slate-700">{category.avgRate}</span>
-                  <div className="flex items-center gap-1 text-[10px] text-slate-600">
-                    <Clock className="w-3 h-3 text-slate-600" />
+                <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-700">
+                  <span className="font-semibold text-slate-800">{category.avgRate}</span>
+                  <div className="flex items-center gap-1 text-[10px] text-slate-700">
+                    <Clock className="w-3 h-3 text-slate-700" />
                     <span>{category.estimatedArrival}</span>
                   </div>
                 </div>

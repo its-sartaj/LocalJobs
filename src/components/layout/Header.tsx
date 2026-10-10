@@ -94,7 +94,8 @@ export function Header() {
               {/* Primary CTA Button (Desktop only, mobile has bottom nav) */}
               <Link
                 href="/post-task"
-                className="hidden sm:inline-flex items-center gap-1.5 bg-brand-500 hover:bg-brand-600 active:bg-brand-700 text-white text-xs sm:text-sm font-bold px-4 py-2.5 rounded-full shadow-sm hover:shadow transition active:scale-95"
+                data-agent="post-task-cta"
+                className="hidden sm:inline-flex items-center gap-1.5 bg-brand-700 hover:bg-brand-800 active:bg-brand-900 text-white text-xs sm:text-sm font-bold px-4 py-2.5 rounded-full shadow-sm hover:shadow transition active:scale-95"
               >
                 <Plus className="w-4 h-4 stroke-[2.5]" />
                 <span>Kaam Post Karein</span>

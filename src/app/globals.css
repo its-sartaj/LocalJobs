@@ -82,6 +82,13 @@ button, a, input, select {
   }
 }
 
+@media (max-width: 640px) {
+  .animate-mist-slow,
+  .animate-horizon-eagle-traverse {
+    animation: none !important;
+  }
+}
+
 /* Drifting Mist between mountain layers */
 @keyframes mist-drift {
   0%, 100% {

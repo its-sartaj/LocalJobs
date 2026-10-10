@@ -4,14 +4,18 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Clock, MapPin, ArrowRight, CheckCircle2 } from "lucide-react";
 import { getLeads } from "@/lib/storage";
+import { INITIAL_LEADS } from "@/lib/mockData";
 import { ServiceRequest } from "@/types";
 import { formatTimeAgo } from "@/lib/utils";
 
 export function LiveLeadsTicker() {
-  const [leads, setLeads] = useState<ServiceRequest[]>([]);
+  const [leads, setLeads] = useState<ServiceRequest[]>(INITIAL_LEADS.slice(0, 4));
 
   useEffect(() => {
-    setLeads(getLeads().slice(0, 4));
+    const stored = getLeads().slice(0, 4);
+    if (stored.length > 0) {
+      setLeads(stored);
+    }
     const handleUpdate = () => setLeads(getLeads().slice(0, 4));
     window.addEventListener("local-jobs-storage-updated", handleUpdate);
     return () => window.removeEventListener("local-jobs-storage-updated", handleUpdate);
@@ -20,7 +24,7 @@ export function LiveLeadsTicker() {
   if (leads.length === 0) return null;
 
   return (
-    <section className="py-8 bg-slate-900 text-white">
+    <section className="py-8 bg-slate-900 text-white" data-agent="live-leads-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-5 gap-2">
           <div className="flex items-center gap-2.5">
@@ -31,6 +35,7 @@ export function LiveLeadsTicker() {
           </div>
           <Link
             href="/worker/feed"
+            data-agent="all-leads-link"
             className="text-xs font-semibold text-brand-400 hover:text-brand-300 flex items-center gap-1"
           >
             <span>Mechanic Portal: Sabhi Leads Dekhein</span>
@@ -43,6 +48,8 @@ export function LiveLeadsTicker() {
             <Link
               key={lead.id}
               href="/worker/feed"
+              data-agent="live-lead-item"
+              data-lead-id={lead.id}
               className="bg-slate-800/80 hover:bg-slate-800 p-4 rounded-2xl border border-slate-700/80 hover:border-slate-600 transition group flex flex-col justify-between"
             >
               <div>

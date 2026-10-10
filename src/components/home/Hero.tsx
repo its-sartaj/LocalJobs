@@ -58,8 +58,11 @@ export function Hero() {
           </p>
 
           {/* Premium Unified Search Capsule */}
+          {/* Premium Unified Search Capsule */}
           <form
             onSubmit={handleSearch}
+            role="search"
+            data-agent="search-form"
             className="mt-6 bg-white/95 backdrop-blur-md p-2 sm:p-2.5 rounded-2xl sm:rounded-full shadow-2xl shadow-black/35 border border-white/80 max-w-3xl mx-auto flex flex-col sm:flex-row items-stretch sm:items-center gap-2"
           >
             {/* Input Search Query */}
@@ -67,16 +70,19 @@ export function Hero() {
               <button
                 type="submit"
                 aria-label="Search"
+                data-agent="search-button"
                 className="text-slate-400 hover:text-brand-500 transition shrink-0"
               >
                 <Search className="w-4 h-4 sm:w-5 sm:h-5" />
               </button>
               <input
                 type="text"
+                name="query"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Kya theek karwana hai? (e.g. AC service, switch, nal)"
                 aria-label="Search local services"
+                data-agent="search-input"
                 className="w-full text-xs sm:text-sm text-slate-900 placeholder-slate-400 focus:outline-none bg-transparent"
               />
             </div>
@@ -85,9 +91,11 @@ export function Hero() {
             <div className="flex items-center gap-2 border-t sm:border-t-0 sm:border-l border-slate-200 pt-2 sm:pt-0 sm:pl-3 px-2 sm:px-3">
               <MapPin className="w-4 h-4 text-brand-500 shrink-0" />
               <select
+                name="pincode"
                 value={selectedPincode}
                 onChange={(e) => setSelectedPincode(e.target.value)}
                 aria-label="Select your location or pincode"
+                data-agent="pincode-select"
                 className="flex-1 sm:flex-initial bg-slate-50 hover:bg-slate-100 text-xs font-semibold text-slate-800 py-2 px-3 rounded-xl sm:rounded-full border border-slate-200 focus:outline-none cursor-pointer transition min-w-0"
               >
                 {POPULAR_PINCODES.map((p) => (
@@ -128,17 +136,21 @@ export function Hero() {
                     <Link
                       key={`chip-a-${idx}`}
                       href={`/post-task?category=${chip.cat}`}
+                      data-agent="service-chip"
+                      data-category={chip.cat}
                       className="px-3.5 py-1.5 bg-white/90 hover:bg-white text-slate-800 hover:text-brand-600 border border-white/60 hover:border-white rounded-full text-xs font-semibold shadow-md backdrop-blur-md transition-all active:scale-95 shrink-0 whitespace-nowrap flex items-center"
                     >
                       {chip.label}
                     </Link>
                   ))}
 
-                  {/* Duplicate Set for Seamless Infinite Auto Loop */}
+                  {/* Duplicate Set for Seamless Infinite Auto Loop (Hidden from screen readers and tab order) */}
                   {quickChips.map((chip, idx) => (
                     <Link
                       key={`chip-b-${idx}`}
                       href={`/post-task?category=${chip.cat}`}
+                      aria-hidden="true"
+                      tabIndex={-1}
                       className="px-3.5 py-1.5 bg-white/90 hover:bg-white text-slate-800 hover:text-brand-600 border border-white/60 hover:border-white rounded-full text-xs font-semibold shadow-md backdrop-blur-md transition-all active:scale-95 shrink-0 whitespace-nowrap flex items-center"
                     >
                       {chip.label}
