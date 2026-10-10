@@ -73,11 +73,11 @@ def optimize_html_files():
 
         print(f"Optimized {os.path.relpath(html_path, out_dir)} ({original_len} -> {len(content)} bytes)")
 
-    # Ensure CNAME and .nojekyll in out/
+    # Ensure CNAME and empty .nojekyll in out/
     with open(os.path.join(out_dir, "CNAME"), "w", encoding="utf-8") as f:
         f.write("localjobs.work.gd\n")
-    with open(os.path.join(out_dir, ".nojekyll"), "w", encoding="utf-8") as f:
-        f.write("# Bypasses Jekyll on GitHub Pages\n")
+    with open(os.path.join(out_dir, ".nojekyll"), "wb") as f:
+        pass
 
     print("Post-build optimization complete!")
 
