@@ -25,7 +25,6 @@ export function Logo({
           width={iconSize}
           height={iconSize}
           className="w-full h-full object-contain filter drop-shadow-md"
-          priority
         />
       </div>
 

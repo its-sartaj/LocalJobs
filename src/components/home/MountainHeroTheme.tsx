@@ -14,19 +14,15 @@ export function MountainHeroTheme() {
     >
       {/* 1. REAL CINEMATIC PHOTOGRAPHIC MOUNTAIN LANDSCAPE */}
       <div className="absolute inset-0 w-full h-full">
-        {/* Real Mountain Photography (Optimized WebP, 96% lighter on mobile) */}
+        {/* Real Mountain Photography (Ultra-fast 8.6 KB WebP for mobile) */}
         <picture className="absolute inset-0 w-full h-full block">
           <source
-            media="(max-width: 768px)"
-            srcSet="/images/mountain_bg_mobile.webp"
-            type="image/webp"
-          />
-          <source
+            media="(min-width: 769px)"
             srcSet="/images/mountain_bg.webp"
             type="image/webp"
           />
           <img
-            src="/images/mountain_bg.jpg"
+            src="/images/mountain_bg_mobile.webp"
             alt="Cinematic Mountain peaks"
             fetchPriority="high"
             loading="eager"
@@ -48,11 +44,10 @@ export function MountainHeroTheme() {
           <picture>
             <source srcSet="/images/eagle.webp" type="image/webp" />
             <img
-              src="/images/eagle.png"
+              src="/images/eagle.webp"
               alt="Real soaring eagle"
               width={224}
               height={154}
-              fetchPriority="high"
               loading="eager"
               decoding="async"
               className="w-full h-auto object-contain select-none pointer-events-none animate-real-eagle-flap"
@@ -68,7 +63,7 @@ export function MountainHeroTheme() {
           <picture>
             <source srcSet="/images/eagle.webp" type="image/webp" />
             <img
-              src="/images/eagle.png"
+              src="/images/eagle.webp"
               alt="Distant eagle"
               width={96}
               height={66}
