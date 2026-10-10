@@ -28,6 +28,9 @@ export const metadata: Metadata = {
     "Mechanic connect",
     "Hyperlocal services",
   ],
+  verification: {
+    google: "Y6Z2hIP4vgOZNvtMoI8xXYrHMZMwjA1wslDM8VKO4qg",
+  },
 };
 
 export const viewport: Viewport = {
