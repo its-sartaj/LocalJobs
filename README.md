@@ -1,6 +1,8 @@
 # Local Jobs - अपने एरिया का काम 🇮🇳
 ### Hyperlocal Service Marketplace for Bharat
 
+🌐 **Live Website:** [https://its-sartaj.github.io/LocalJobs/](https://its-sartaj.github.io/LocalJobs/)
+
 > **Brand Name:** Local Jobs  
 > **Tagline:** "Apne Area Ka Kaam"  
 > **Target Audience:** Hyperlocal customers with urgent repair/maintenance needs + local mechanics & technicians (AC mechanics, electricians, plumbers, appliances, carpenters, painters). Mobile-first (95% budget Android users).
@@ -58,7 +60,13 @@ npm run dev
 ```
 Open **[http://localhost:3000](http://localhost:3000)** in your browser or smartphone.
 
-### Key URLs to Test:
+### 🌐 Live Production Links:
+- **Live Website:** [https://its-sartaj.github.io/LocalJobs/](https://its-sartaj.github.io/LocalJobs/)
+- **Post a Task (Customer):** [https://its-sartaj.github.io/LocalJobs/post-task](https://its-sartaj.github.io/LocalJobs/post-task)
+- **Technician Leads Feed:** [https://its-sartaj.github.io/LocalJobs/worker/feed](https://its-sartaj.github.io/LocalJobs/worker/feed)
+- **Technician Registration:** [https://its-sartaj.github.io/LocalJobs/worker/register](https://its-sartaj.github.io/LocalJobs/worker/register)
+
+### 💻 Local Development URLs:
 - **Homepage:** `http://localhost:3000/`
 - **Post a Task (Customer):** `http://localhost:3000/post-task`
 - **Technician Leads Feed:** `http://localhost:3000/worker/feed` (or `/leads`)
