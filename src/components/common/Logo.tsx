@@ -18,7 +18,7 @@ export function Logo({
         style={{ width: iconSize, height: iconSize }}
       >
         <img
-          src="/logo.svg"
+          src="/LocalJobs/logo.svg"
           alt="Local Jobs Logo"
           width={iconSize}
           height={iconSize}

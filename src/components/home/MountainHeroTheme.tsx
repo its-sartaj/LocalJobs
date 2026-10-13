@@ -18,11 +18,11 @@ export function MountainHeroTheme() {
         <picture className="absolute inset-0 w-full h-full block">
           <source
             media="(min-width: 769px)"
-            srcSet="/images/mountain_bg.webp"
+            srcSet="/LocalJobs/images/mountain_bg.webp"
             type="image/webp"
           />
           <img
-            src="/images/mountain_bg_mobile.webp"
+            src="/LocalJobs/images/mountain_bg_mobile.webp"
             alt="Cinematic Mountain peaks"
             width={480}
             height={267}
@@ -44,9 +44,9 @@ export function MountainHeroTheme() {
       <div className="absolute top-2 sm:top-5 right-2 sm:right-12 md:right-20 z-20 pointer-events-none">
         <div className="animate-real-eagle-soar w-32 sm:w-44 md:w-56 h-auto filter drop-shadow-[0_12px_24px_rgba(0,0,0,0.6)]">
           <picture>
-            <source srcSet="/images/eagle.webp" type="image/webp" />
+            <source srcSet="/LocalJobs/images/eagle.webp" type="image/webp" />
             <img
-              src="/images/eagle.webp"
+              src="/LocalJobs/images/eagle.webp"
               alt="Real soaring eagle"
               width={224}
               height={154}
@@ -63,9 +63,9 @@ export function MountainHeroTheme() {
       <div className="hidden sm:block absolute top-10 left-0 w-full z-15 pointer-events-none opacity-80">
         <div className="animate-horizon-eagle-traverse w-16 sm:w-24 h-auto filter drop-shadow-[0_6px_12px_rgba(0,0,0,0.5)]">
           <picture>
-            <source srcSet="/images/eagle.webp" type="image/webp" />
+            <source srcSet="/LocalJobs/images/eagle.webp" type="image/webp" />
             <img
-              src="/images/eagle.webp"
+              src="/LocalJobs/images/eagle.webp"
               alt="Distant eagle"
               width={96}
               height={66}
