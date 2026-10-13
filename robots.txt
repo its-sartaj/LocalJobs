@@ -1,0 +1,21 @@
+# robots.txt for https://its-sartaj.github.io/LocalJobs/
+User-agent: *
+Allow: /
+
+# AI Agents & Search Engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://its-sartaj.github.io/LocalJobs/sitemap.xml
