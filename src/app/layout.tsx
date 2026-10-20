@@ -6,29 +6,29 @@ import { BottomNav } from "@/components/layout/BottomNav";
 import { WhatsAppButton } from "@/components/common/WhatsAppButton";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://its-sartaj.github.io/LocalJobs"),
+  metadataBase: new URL("https://localjob.work.gd"),
   title: "Local Jobs | Hyperlocal Service Marketplace",
   description:
     "Ghar ka koi bhi repair ya maintenance kaam? AC Repair, Electrician, Plumber, Fridge, Carpenter - Apne area ke verified mechanic ko direct call karein bina kisi commission ke.",
-  manifest: "/LocalJobs/manifest.json",
+  manifest: "/manifest.json",
   icons: {
-    icon: "/LocalJobs/icon.svg",
-    apple: "/LocalJobs/icon.svg",
+    icon: "/icon.svg",
+    apple: "/icon.svg",
   },
   alternates: {
-    canonical: "https://its-sartaj.github.io/LocalJobs/",
+    canonical: "https://localjob.work.gd/",
   },
   openGraph: {
     title: "Local Jobs | Hyperlocal Service Marketplace",
     description:
       "Ghar ka koi bhi repair ya maintenance kaam? AC Repair, Electrician, Plumber, Fridge, Carpenter - Apne area ke verified mechanic ko direct call karein bina kisi commission ke.",
-    url: "https://its-sartaj.github.io/LocalJobs/",
+    url: "https://localjob.work.gd/",
     siteName: "Local Jobs",
     locale: "hi_IN",
     type: "website",
     images: [
       {
-        url: "/LocalJobs/logo.png",
+        url: "/logo.png",
         width: 1024,
         height: 1024,
         alt: "Local Jobs Logo",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: "summary",
     title: "Local Jobs | Hyperlocal Service Marketplace",
     description: "Apne area ke verified mechanic ko direct call karein bina kisi commission ke.",
-    images: ["/LocalJobs/logo.png"],
+    images: ["/logo.png"],
   },
   appleWebApp: {
     capable: true,
@@ -78,7 +78,7 @@ export default function RootLayout({
         <link
           rel="preload"
           as="image"
-          href="/LocalJobs/images/mountain_bg_mobile.webp"
+          href="/images/mountain_bg_mobile.webp"
           media="(max-width: 768px)"
           fetchPriority="high"
           type="image/webp"
@@ -86,7 +86,7 @@ export default function RootLayout({
         <link
           rel="preload"
           as="image"
-          href="/LocalJobs/images/mountain_bg.webp"
+          href="/images/mountain_bg.webp"
           media="(min-width: 769px)"
           fetchPriority="high"
           type="image/webp"
@@ -99,23 +99,23 @@ export default function RootLayout({
               "@graph": [
                 {
                   "@type": "WebSite",
-                  "@id": "https://its-sartaj.github.io/LocalJobs/#website",
-                  "url": "https://its-sartaj.github.io/LocalJobs/",
+                  "@id": "https://localjob.work.gd/#website",
+                  "url": "https://localjob.work.gd/",
                   "name": "Local Jobs",
                   "description": "Hyperlocal verified technician marketplace in Delhi NCR",
                   "inLanguage": "hi-IN",
                   "potentialAction": {
                     "@type": "SearchAction",
-                    "target": "https://its-sartaj.github.io/LocalJobs/post-task?query={search_term_string}",
+                    "target": "https://localjob.work.gd/post-task?query={search_term_string}",
                     "query-input": "required name=search_term_string",
                   },
                 },
                 {
                   "@type": "HomeAndConstructionBusiness",
-                  "@id": "https://its-sartaj.github.io/LocalJobs/#organization",
+                  "@id": "https://localjob.work.gd/#organization",
                   "name": "Local Jobs",
-                  "url": "https://its-sartaj.github.io/LocalJobs/",
-                  "logo": "https://its-sartaj.github.io/LocalJobs/logo.png",
+                  "url": "https://localjob.work.gd/",
+                  "logo": "https://localjob.work.gd/logo.png",
                   "telephone": "+91-7979968347",
                   "priceRange": "₹149 - ₹1499",
                   "address": {

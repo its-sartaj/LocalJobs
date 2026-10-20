@@ -1,7 +1,7 @@
 # Local Jobs - अपने एरिया का काम 🇮🇳
 ### Hyperlocal Service Marketplace for Bharat
 
-🌐 **Live Website:** [https://its-sartaj.github.io/LocalJobs/](https://its-sartaj.github.io/LocalJobs/)
+🌐 **Live Website:** [https://localjob.work.gd/](https://localjob.work.gd/)
 
 > **Brand Name:** Local Jobs  
 > **Tagline:** "Apne Area Ka Kaam"  
@@ -61,10 +61,10 @@ npm run dev
 Open **[http://localhost:3000](http://localhost:3000)** in your browser or smartphone.
 
 ### 🌐 Live Production Links:
-- **Live Website:** [https://its-sartaj.github.io/LocalJobs/](https://its-sartaj.github.io/LocalJobs/)
-- **Post a Task (Customer):** [https://its-sartaj.github.io/LocalJobs/post-task](https://its-sartaj.github.io/LocalJobs/post-task)
-- **Technician Leads Feed:** [https://its-sartaj.github.io/LocalJobs/worker/feed](https://its-sartaj.github.io/LocalJobs/worker/feed)
-- **Technician Registration:** [https://its-sartaj.github.io/LocalJobs/worker/register](https://its-sartaj.github.io/LocalJobs/worker/register)
+- **Live Website:** [https://localjob.work.gd/](https://localjob.work.gd/)
+- **Post a Task (Customer):** [https://localjob.work.gd/post-task](https://localjob.work.gd/post-task)
+- **Technician Leads Feed:** [https://localjob.work.gd/worker/feed](https://localjob.work.gd/worker/feed)
+- **Technician Registration:** [https://localjob.work.gd/worker/register](https://localjob.work.gd/worker/register)
 
 ### 💻 Local Development URLs:
 - **Homepage:** `http://localhost:3000/`

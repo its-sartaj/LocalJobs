@@ -1,4 +1,4 @@
-# robots.txt for https://its-sartaj.github.io/LocalJobs/
+# robots.txt for https://localjob.work.gd/
 User-agent: *
 Allow: /
 
@@ -18,4 +18,4 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-Sitemap: https://its-sartaj.github.io/LocalJobs/sitemap.xml
+Sitemap: https://localjob.work.gd/sitemap.xml

@@ -37,8 +37,8 @@ def optimize_html_files():
         content = content.replace('fetchPriority="low"', 'fetchpriority="low"')
 
         # 2. Extract existing mountain preloads if present so we can hoist them
-        mobile_preload = '<link rel="preload" as="image" href="/LocalJobs/images/mountain_bg_mobile.webp" media="(max-width: 768px)" fetchpriority="high" type="image/webp"/>'
-        desktop_preload = '<link rel="preload" as="image" href="/LocalJobs/images/mountain_bg.webp" media="(min-width: 769px)" fetchpriority="high" type="image/webp"/>'
+        mobile_preload = '<link rel="preload" as="image" href="/images/mountain_bg_mobile.webp" media="(max-width: 768px)" fetchpriority="high" type="image/webp"/>'
+        desktop_preload = '<link rel="preload" as="image" href="/images/mountain_bg.webp" media="(min-width: 769px)" fetchpriority="high" type="image/webp"/>'
 
         # Remove any existing occurrences of injected tags to ensure idempotency
         content = re.sub(r'<style id="__next_css">.*?</style>', '', content, flags=re.DOTALL)
@@ -67,7 +67,7 @@ def optimize_html_files():
         # 3. Make stylesheet link non-render blocking (media="print" onload="this.media='all'")
         # while keeping data-precedence="next" so Next.js hydration doesn't conflict
         content = re.sub(
-            r'<link rel="stylesheet" href="((?:/LocalJobs)?/_next/static/css/[^"]+)" data-precedence="next"/>',
+            r'<link rel="stylesheet" href="(/_next/static/css/[^"]+)" data-precedence="next"/>',
             r'''<link rel="stylesheet" href="\1" media="print" onload="this.media='all'" data-precedence="next"/><noscript><link rel="stylesheet" href="\1"/></noscript>''',
             content
         )
@@ -77,17 +77,16 @@ def optimize_html_files():
 
         print(f"Optimized {os.path.relpath(html_path, out_dir)} ({original_len} -> {len(content)} bytes)")
 
-    # Ensure NO CNAME exists (GitHub Pages native URL https://its-sartaj.github.io/LocalJobs/)
-    cname_path = os.path.join(out_dir, "CNAME")
-    if os.path.exists(cname_path):
-        os.remove(cname_path)
-        print("Removed CNAME from out/")
+    # Ensure CNAME in out/ for custom domain localjob.work.gd
+    with open(os.path.join(out_dir, "CNAME"), "w", encoding="utf-8") as f:
+        f.write("localjob.work.gd\n")
+    print("Wrote CNAME (localjob.work.gd) to out/")
 
     # Ensure empty .nojekyll in out/
     with open(os.path.join(out_dir, ".nojekyll"), "wb") as f:
         pass
 
-    for fname in ["robots.txt", "sitemap.xml", "icon-192.png", "icon-512.png", "icon.svg", "logo.svg", "manifest.json"]:
+    for fname in ["CNAME", "robots.txt", "sitemap.xml", "icon-192.png", "icon-512.png", "icon.svg", "logo.svg", "manifest.json"]:
         src = os.path.join("public", fname)
         if os.path.exists(src):
             shutil.copy2(src, os.path.join(out_dir, fname))
